@@ -194,7 +194,14 @@ document.querySelectorAll("button").forEach(botao => {
             }
             return;
         }
-
+if (display.value === "undefined") {
+            if (!isNaN(valor)) {
+                display.value = valor;
+            } else {
+                display.value = "";
+            }
+            return;
+        }
         // apagar
         if (valor === "⌫") {
             display.value = display.value.slice(0, -1);
